@@ -7,6 +7,51 @@
   list-style: none;
 }
 
+svg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  /* background: #c9c9c9; */
+  /* z-index: 99999999999999999999999999999999999999999999999; */
+  cursor: pointer;
+  pointer-events: none;
+  filter: sepia(20%);
+}
+
+.circle {
+  height: 24px;
+  width: 24px;
+  border-radius: 24px;
+  background-color: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 999999999999999999999999; /* so that it stays on top of all other elements */
+}
+
+.circle_head {
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+}
+
+::selection {
+  background: orangered !important;
+  color: black;
+}
+
+#particles-js {
+  height: 100%;
+  background: #171717;
+  position: absolute;
+  z-index: 0;
+  opacity: 0.4;
+}
+
 .main {
   background-color: #171717;
   color: antiquewhite;
@@ -36,7 +81,7 @@
   text-shadow: 0 0 25px orangered, 0 0 50px orangered;
   transform: scale(1.1);
 }
-span {
+.logo > span {
   color: red;
 }
 
@@ -74,13 +119,16 @@ span {
   justify-content: space-between;
   gap: 7em;
   padding: 30px 12% 0;
+  z-index: 999999999999999999999999999;
 }
 .home-content {
   max-width: 800px;
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  z-index: 99999;
 }
+
 .home-content h3 {
   font-size: 55px;
 }
@@ -158,9 +206,13 @@ span {
   scale: 0.8;
 }
 
+.img-box {
+  z-index: 999999;
+}
+
 .img-box img {
   border-radius: 40%;
-  /* width: 550px; */
+  z-index: 99999999;
   height: 500px;
   z-index: 999999;
 }
@@ -202,3 +254,26 @@ span {
   box-shadow: 0 0 500px orangered, 0 0 1000px orangered;
 }
 /* ============================= */
+.tanvir_text {
+  color: red;
+}
+
+.typing_effect {
+  width: 19ch;
+  border-right: 3px solid red;
+  animation: blink 1s step-end infinite, type 2.5s forwards;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+@keyframes type {
+  0% {
+    width: 0;
+  }
+}
