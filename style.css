@@ -272,6 +272,86 @@ body {
   }
 }
 
+.contact_section {
+  position: relative;
+  min-height: 100vh;
+  padding: 50px 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: #222;
+}
+
+.contact_section .contact_div_section {
+  max-width: 800px;
+  text-align: center;
+}
+
+.contact_section .contact_div_section h2 {
+  font-size: 3em;
+  color: white;
+  font-weight: 500;
+}
+
+.contact_section .contact_div_section p {
+  color: #fff;
+  font-size: 1.1em;
+  font-weight: 300;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+
+  background: ;
+  margin-top: 30px;
+}
+.container .contactinfo {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.container .contactinfo .box {
+  position: relative;
+  padding: 20px;
+  display: flex;
+  cursor: pointer;
+}
+.container .contactinfo .box .icon {
+  position: relative;
+  min-width: 60px;
+  height: 60px;
+  background: repeating-conic-gradient(
+    from 27.5deg,
+    #01dbc2 0%,
+    #01dbc2 10%,
+    transparent 10%,
+    transparent 50%
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container .contactinfo .box .icon::before{
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-conic-gradient(
+    from 117.5deg,
+    #01dbc2 0%,
+    #01dbc2 10%,
+    transparent 10%,
+    transparent 50%
+  );
+
+}
+
+
 @keyframes type {
   0% {
     width: 0;
