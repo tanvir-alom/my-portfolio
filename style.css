@@ -255,12 +255,12 @@ body {
 }
 /* ============================= */
 .tanvir_text {
-  color: red;
+  color: orangered;
 }
 
 .typing_effect {
   width: 19ch;
-  border-right: 3px solid red;
+  border-right: 3px solid orangered;
   animation: blink 1s step-end infinite, type 2.5s forwards;
   overflow: hidden;
   white-space: nowrap;
@@ -306,8 +306,6 @@ body {
   justify-content: center;
   align-items: center;
   gap: 50px;
-
-  background: ;
   margin-top: 30px;
 }
 .container .contactinfo {
@@ -318,7 +316,7 @@ body {
 
 .container .contactinfo .box {
   position: relative;
-  padding: 20px;
+  padding: 20px 0;
   display: flex;
   cursor: pointer;
 }
@@ -328,8 +326,8 @@ body {
   height: 60px;
   background: repeating-conic-gradient(
     from 27.5deg,
-    #01dbc2 0%,
-    #01dbc2 10%,
+    orangered 0%,
+    orangered 10%,
     transparent 10%,
     transparent 50%
   );
@@ -337,20 +335,195 @@ body {
   justify-content: center;
   align-items: center;
 }
-.container .contactinfo .box .icon::before{
-  content: '';
+.container .contactinfo .box .icon::before {
+  content: "";
   position: absolute;
   inset: 0;
   background: repeating-conic-gradient(
     from 117.5deg,
-    #01dbc2 0%,
-    #01dbc2 10%,
+    orangered 0%,
+    orangered 10%,
     transparent 10%,
     transparent 50%
   );
-
+}
+.container .contactinfo .box .icon::after {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  background: #222;
+}
+.container .contactinfo .box .icon b {
+  position: absolute;
+  inset: 8px;
+  background: orangered;
+  z-index: 2;
 }
 
+.container .contactinfo .box .icon i {
+  position: relative;
+  z-index: 1000;
+  color: orangered;
+  font-size: 1.25em;
+  color: black;
+}
+
+.container .contactinfo .box .text {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+  font-size: 1.1em;
+  color: #fff;
+  font-family: 300;
+}
+
+.container .contactinfo .box .text h3 {
+  font-weight: 500;
+  color: orangered;
+}
+
+.container .contactinfo .txt {
+  color: #fff;
+  margin-top: 50px;
+  font-weight: 500;
+  border-left: 50px solid orangered;
+  padding-left: 10px;
+  line-height: 1em;
+}
+
+.container .contactinfo .sci {
+  position: relative;
+  display: flex;
+  gap: 30px;
+  margin: 20px 0;
+}
+.container .contactinfo .sci li {
+  list-style: none;
+}
+.container .contactinfo .sci li a {
+  color: #fff;
+  font-size: 1.5em;
+  transition: 0.25s;
+}
+
+.container .contactinfo .sci li a:hover {
+  color: orangered;
+  filter: drop-shadow(0 0 5px orangered);
+}
+
+.container .contactForm {
+  position: relative;
+  width: 40%;
+  background: repeating-conic-gradient(
+    from var(--a),
+    orangered 0%,
+    orangered 10%,
+    transparent 10%,
+    transparent 50%
+  );
+  animation: animate 6s linear infinite;
+  padding: 60px;
+}
+.container .contactForm::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: repeating-conic-gradient(
+    from var(--a),
+    orangered 0%,
+    orangered 10%,
+    transparent 10%,
+    transparent 50%
+  );
+  animation: animate 6s linear infinite;
+}
+.container .contactForm::after {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  border: 20px solid #222;
+  background: #333;
+}
+
+@property --a {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+/* @keyframes animate {
+  0% {
+    --a: 0deg;
+  }
+  100% {
+    --a: 360deg;
+  }
+} */
+@keyframes animate {
+  0% {
+    --a: 0deg;
+  }
+  100% {
+    --a: 360deg;
+  }
+}
+
+.container .contactForm form {
+  position: relative;
+  z-index: 10;
+}
+.container .contactForm form h2 {
+  font-size: 2em;
+  color: #fff;
+  font-weight: 500;
+}
+.container .contactForm form .inputBox {
+  position: relative;
+  width: 100%;
+  margin-top: 20px;
+}
+.container .contactForm form .inputBox input,
+.container .contactForm form .inputBox textarea {
+  width: 100% !important;
+  padding: 5px 0;
+  font-size: 1.1em;
+  margin: 10px 0;
+  border: none;
+  background: transparent;
+  border-bottom: 2px solid orangered;
+  color: #fff;
+  outline: none;
+  resize: none;
+}
+
+.container .contactForm form .inputBox span {
+  position: absolute;
+  left: 0;
+  pointer-events: none;
+  padding: 5px 0;
+  margin: 10px 0;
+  font-size: 1.1em;
+  color: #fff;
+  transition: 0.5s;
+}
+.container .contactForm form .inputBox input:focus ~ span,
+.container .contactForm form .inputBox textarea:focus ~ span,
+.container .contactForm form .inputBox input:valid ~ span,
+.container .contactForm form .inputBox textarea:valid ~ span {
+  color: orangered;
+  font-size: 0.9em;
+  transform: translateY(-24px);
+}
+
+.container .contactForm form .inputBox input[type="submit"] {
+  width: 100%;
+  background: orangered;
+  color: #222;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 1.1em;
+}
 
 @keyframes type {
   0% {
