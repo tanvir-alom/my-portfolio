@@ -57,6 +57,12 @@ body {
   color: antiquewhite;
 }
 
+.animated_bg {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+}
+
 .header {
   position: fixed;
   top: 0;
@@ -68,7 +74,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  z-index: 100;
+  z-index: 100000000000000000000000;
 }
 .logo {
   font-size: 36px;
@@ -272,6 +278,15 @@ body {
   }
 }
 
+.section_divider {
+  min-height: 7.5rem;
+  min-width: 100%;
+  background: rgba(255, 255, 255, 0.097);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3.8px);
+  -webkit-backdrop-filter: blur(5.6px);
+}
+
 .contact_section {
   position: relative;
   min-height: 100vh;
@@ -280,7 +295,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background: #222;
+  /* background: #222; */
 }
 
 .contact_section .contact_div_section {
@@ -322,6 +337,10 @@ body {
   gap: 50px;
   margin-top: 30px;
 }
+.contactinfo {
+  /* pointer-events: none; */
+}
+
 .container .contactinfo {
   width: 50%;
   display: flex;
